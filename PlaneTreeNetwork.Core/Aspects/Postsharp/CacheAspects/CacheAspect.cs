@@ -26,7 +26,7 @@ namespace PlaneTreeNetwork.Core.Aspects.Postsharp.CacheAspects
         {
             if (typeof(ICacheManager).IsAssignableFrom(_cacheType) == false)
             {
-                throw new Exception("Wrong Cache Manager...!");//yalnış
+                throw new Exception("Wrong Cache Manager..!");//yalnış
             }
             _cacheManager = (ICacheManager)Activator.CreateInstance(_cacheType);
             base.RuntimeInitialize(method);
