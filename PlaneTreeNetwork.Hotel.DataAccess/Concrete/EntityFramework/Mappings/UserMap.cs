@@ -21,6 +21,8 @@ namespace PlaneTreeNetwork.Hotel.DataAccess.Concrete.EntityFramework.Mappings
             Property(x => x.UserFirstName).HasColumnName("UserFirstName");
             Property(x => x.UserLastName).HasColumnName("UserLastName");
             Property(x => x.UserContratStatus).HasColumnName("UserContratStatus");
+            Property(x => x.UserRegistrationDate).HasColumnName("UserRegistrationDate");
+            Property(x => x.UserMembershipDate).HasColumnName("UserMembershipDate");
         }
     }
 }

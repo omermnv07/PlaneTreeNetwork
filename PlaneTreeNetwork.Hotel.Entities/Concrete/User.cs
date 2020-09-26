@@ -16,6 +16,8 @@ namespace PlaneTreeNetwork.Hotel.Entities.Concrete
         public virtual string UserLastName { get; set; }
         public virtual string UserEmail { get; set; }
         public virtual bool UserContratStatus { get; set; }
+        public virtual DateTime UserRegistrationDate { get; set; }
+        public virtual DateTime UserMembershipDate { get; set; }
 
     }
 }

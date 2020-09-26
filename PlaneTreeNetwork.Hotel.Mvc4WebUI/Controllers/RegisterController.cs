@@ -25,7 +25,8 @@ namespace PlaneTreeNetwork.Hotel.Mvc4WebUI.Controllers
         [HttpPost]
         public ActionResult Index(User user)
         {
-
+            user.UserRegistrationDate = DateTime.Now;// TODO:şuan üyelik tarihleri sistemle çalışacak.
+            user.UserMembershipDate = DateTime.Now;//TODO:şuan üyelik tarihleri sistemle çalışacak.
             _userService.Add(user);
             return View();
         }
