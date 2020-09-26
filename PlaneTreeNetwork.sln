@@ -1,0 +1,100 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaneTreeNetwork.Core", "PlaneTreeNetwork.Core\PlaneTreeNetwork.Core.csproj", "{2D80CA1C-77DB-4ECD-82DA-14E6019DB129}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaneTreeNetwork.Hotel.Entities", "PlaneTreeNetwork.Hotel.Entities\PlaneTreeNetwork.Hotel.Entities.csproj", "{16C9AD0C-638D-4B5F-82AE-389E4826F344}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaneTreeNetwork.Hotel.DataAccess", "PlaneTreeNetwork.Hotel.DataAccess\PlaneTreeNetwork.Hotel.DataAccess.csproj", "{BFE4CD58-B9F8-4903-91DB-CB97901FAB9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaneTreeNetwork.Hotel.Business", "PlaneTreeNetwork.Hotel.Business\PlaneTreeNetwork.Hotel.Business.csproj", "{26F988C1-56C5-4290-BF6E-4BE1D38C98A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaneTreeNetwork.Hotel.MvcWebUI.Tests", "PlaneTreeNetwork.Hotel.MvcWebUI.Tests\PlaneTreeNetwork.Hotel.MvcWebUI.Tests.csproj", "{B98F9821-0F8E-4D40-B026-87583B8E400A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaneTreeNetwork.DataAccess.Tests", "PlaneTreeNetwork.DataAccess.Tests\PlaneTreeNetwork.DataAccess.Tests.csproj", "{9A92F104-9292-4A51-A646-C73895FC25E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaneTreeNetwork.Business.Tests", "PlaneTreeNetwork.Business.Tests\PlaneTreeNetwork.Business.Tests.csproj", "{97A7845F-2795-404D-98BC-D996147FAE41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaneTreeNetwork.Hotel.WebApi", "PlaneTreeNetwork.Hotel.WebApi\PlaneTreeNetwork.Hotel.WebApi.csproj", "{5922ECED-CD16-4F8E-A328-2F9F07C370DD}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PlaneTreeNetwork.Hotel.WcfService", "PlaneTreeNetwork.Hotel.WcfService\", "{8D79AAC3-833A-40FE-A403-4C5BAA51C68F}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		ProjectReferences = "{26f988c1-56c5-4290-bf6e-4be1d38c98a5}|PlaneTreeNetwork.Hotel.Business.dll;{2D80CA1C-77DB-4ECD-82DA-14E6019DB129}|PlaneTreeNetwork.Core.dll;{BFE4CD58-B9F8-4903-91DB-CB97901FAB9A}|PlaneTreeNetwork.Hotel.DataAccess.dll;{16C9AD0C-638D-4B5F-82AE-389E4826F344}|PlaneTreeNetwork.Hotel.Entities.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_55499"
+		Debug.AspNetCompiler.PhysicalPath = "PlaneTreeNetwork.Hotel.WcfService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55499\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_55499"
+		Release.AspNetCompiler.PhysicalPath = "PlaneTreeNetwork.Hotel.WcfService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55499\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "55499"
+		SlnRelativePath = "PlaneTreeNetwork.Hotel.WcfService\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaneTreeNetwork.Hotel.Mvc4WebUI", "PlaneTreeNetwork.Hotel.Mvc4WebUI\PlaneTreeNetwork.Hotel.Mvc4WebUI.csproj", "{8C183C4D-202D-4E98-9D20-D22B79F3E4E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D80CA1C-77DB-4ECD-82DA-14E6019DB129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D80CA1C-77DB-4ECD-82DA-14E6019DB129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D80CA1C-77DB-4ECD-82DA-14E6019DB129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D80CA1C-77DB-4ECD-82DA-14E6019DB129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16C9AD0C-638D-4B5F-82AE-389E4826F344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16C9AD0C-638D-4B5F-82AE-389E4826F344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16C9AD0C-638D-4B5F-82AE-389E4826F344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16C9AD0C-638D-4B5F-82AE-389E4826F344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFE4CD58-B9F8-4903-91DB-CB97901FAB9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFE4CD58-B9F8-4903-91DB-CB97901FAB9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFE4CD58-B9F8-4903-91DB-CB97901FAB9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFE4CD58-B9F8-4903-91DB-CB97901FAB9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26F988C1-56C5-4290-BF6E-4BE1D38C98A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26F988C1-56C5-4290-BF6E-4BE1D38C98A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26F988C1-56C5-4290-BF6E-4BE1D38C98A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26F988C1-56C5-4290-BF6E-4BE1D38C98A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B98F9821-0F8E-4D40-B026-87583B8E400A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B98F9821-0F8E-4D40-B026-87583B8E400A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B98F9821-0F8E-4D40-B026-87583B8E400A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B98F9821-0F8E-4D40-B026-87583B8E400A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A92F104-9292-4A51-A646-C73895FC25E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A92F104-9292-4A51-A646-C73895FC25E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A92F104-9292-4A51-A646-C73895FC25E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A92F104-9292-4A51-A646-C73895FC25E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97A7845F-2795-404D-98BC-D996147FAE41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A7845F-2795-404D-98BC-D996147FAE41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A7845F-2795-404D-98BC-D996147FAE41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A7845F-2795-404D-98BC-D996147FAE41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5922ECED-CD16-4F8E-A328-2F9F07C370DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5922ECED-CD16-4F8E-A328-2F9F07C370DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5922ECED-CD16-4F8E-A328-2F9F07C370DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5922ECED-CD16-4F8E-A328-2F9F07C370DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D79AAC3-833A-40FE-A403-4C5BAA51C68F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D79AAC3-833A-40FE-A403-4C5BAA51C68F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D79AAC3-833A-40FE-A403-4C5BAA51C68F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D79AAC3-833A-40FE-A403-4C5BAA51C68F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8C183C4D-202D-4E98-9D20-D22B79F3E4E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C183C4D-202D-4E98-9D20-D22B79F3E4E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C183C4D-202D-4E98-9D20-D22B79F3E4E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C183C4D-202D-4E98-9D20-D22B79F3E4E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15231F20-D623-4B8C-BB05-37C5BC0710D1}
+	EndGlobalSection
+EndGlobal

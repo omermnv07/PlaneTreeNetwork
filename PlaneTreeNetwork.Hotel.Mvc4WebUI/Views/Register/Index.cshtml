@@ -1,0 +1,181 @@
+﻿@model PlaneTreeNetwork.Hotel.Mvc4WebUI.Models.RegisterAddViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  @*<meta name="viewport" content="width=device-width" />*@
+    <title>Index</title>
+
+    <link href="~/Content/css/register.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.5.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+    <div class="register-background"></div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="register-background"></div>
+
+        <div class="register-form col-md-4">
+            <div>
+                <h2 class="h2 mb-4 text-center">Digi Otel'e hoşgeldiniz...</h2>
+                <h4 class="h4 mb-4 text-center">
+                    Digi Otel'i ücretsiz 14 gün boyunca kullanmak için kayıt olunuz.
+                </h4>
+            </div>
+            <hr />
+            @Html.ValidationSummary(true,"",new { @class="text-danger"})
+            <div class="form-group">
+                <label class="control-label col-md-3">KULLANICI ADI</label>
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.User.UserName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.User.UserName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">ŞİFRE</label>
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.User.UserPassword, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.User.UserPassword, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">ADI</label>
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.User.UserFirstName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.User.UserFirstName, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">SOYADI</label>
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.User.UserLastName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.User.UserLastName, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">E-MAIL</label>
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.User.UserEmail, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.User.UserEmail, "", new { @class = "text-danger" })
+
+                </div>  
+            </div>
+
+            <div class="form-gorup">
+                <div class="row">
+                    <div class="col-md-2">
+                        @Html.CheckBoxFor(m => m.User.UserContratStatus, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.User.UserContratStatus, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-10  float-left">
+                        <button type="button" data-toggle="modal" style="background-color:white" data-target="#exampleModalCenter">
+                            <b>KULLANIM KOŞULLARINI OKUDUM KABUL EDİYORUM</b>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">kayıt ol</button>
+                    @*<input type="submit" value="Kayıt Ol" class="btn btn-primary float-left" />*@
+                    <input type="submit" value="Zaten Üyeyim" class="btn btn-primary float-right" />
+                </div>
+            </div>
+
+            <!-- Button trigger modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalLongTitle"><b>Kullanım Koşulları</b></h2><p></p>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                İşbu sözleşme taraflara sözleşme konusu site ile ilgili hak ve yükümlülükler yükler ve taraflar işbu sözleşmeyi kabul ettiklerinde bahsi geçen hak ve yükümlülükleri eksiksiz, doğru, zamanında, işbu sözleşmede talep edilen şartlar dâhilinde yerine getireceklerini beyan ederler.
+                            </p>
+                            <b>1. SORUMLULUKLAR</b>
+                            <p>
+                                a.Firma, fiyatlar ve sunulan ürün ve hizmetler üzerinde değişiklik yapma hakkını her zaman saklı tutar.
+
+                                b.Firma, üyenin sözleşme konusu hizmetlerden, teknik arızalar dışında yararlandırılacağını kabul ve taahhüt eder.
+
+                                c.Kullanıcı, sitenin kullanımında tersine mühendislik yapmayacağını ya da bunların kaynak kodunu bulmak veya elde etmek amacına yönelik herhangi bir başka işlemde bulunmayacağını aksi halde ve 3. Kişiler nezdinde doğacak zararlardan sorumlu olacağını, hakkında hukuki ve cezai işlem yapılacağını peşinen kabul eder.
+                            </p>
+                            <b>2. Fikri Mülkiyet Hakları</b>
+                            <p>
+                                2.1. İşbu Site’de yer alan ünvan, işletme adı, marka, patent, logo, tasarım, bilgi ve yöntem gibi tescilli veya tescilsiz tüm fikri mülkiyet hakları site işleteni ve sahibi firmaya veya belirtilen ilgilisine ait olup, ulusal ve uluslararası hukukun koruması altındadır. İşbu Site’nin ziyaret edilmesi veya bu Site’deki hizmetlerden yararlanılması söz konusu fikri mülkiyet hakları konusunda hiçbir hak vermez.
+
+                                2.2. Site’de yer alan bilgiler hiçbir şekilde çoğaltılamaz, yayınlanamaz, kopyalanamaz, sunulamaz ve/veya aktarılamaz. Site’nin bütünü veya bir kısmı diğer bir internet sitesinde izinsiz olarak kullanılamaz.
+                            </p>
+                            <b>3. Gizli Bilgi</b>
+                            <p>
+                                3.1. Firma, site üzerinden kullanıcıların ilettiği kişisel bilgileri 3. Kişilere açıklamayacaktır. Bu kişisel bilgiler; kişi adı-soyadı, adresi, telefon numarası, cep telefonu, Türkiye Cumhuriyeti kimlik numarası, e-posta adresi gibi Kullanıcı’yı tanımlamaya yönelik her türlü diğer bilgiyi içermekte olup, kısaca ‘Gizli Bilgiler’ olarak anılacaktır.
+
+                                3.2. Kullanıcı, sadece tanıtım, reklam, kampanya, promosyon, duyuru vb. pazarlama faaliyetleri kapsamında kullanılması ile sınırlı olmak üzere, Site’nin sahibi olan firmanın kendisine ait iletişim, portföy durumu ve demografik bilgilerini iştirakleri ya da bağlı bulunduğu grup şirketleri ile paylaşmasına muvafakat ettiğini kabul ve beyan eder. Bu kişisel bilgiler firma bünyesinde müşteri profili belirlemek, müşteri profiline uygun promosyon ve kampanyalar sunmak ve istatistiksel çalışmalar yapmak amacıyla kullanılabilecektir.
+
+                                3.3. Gizli Bilgiler, ancak resmi makamlarca usulü dairesinde bu bilgilerin talep edilmesi halinde ve yürürlükteki emredici mevzuat hükümleri gereğince resmi makamlara açıklama yapılmasının zorunlu olduğu durumlarda resmi makamlara açıklanabilecektir.
+                            </p>
+                            <b> 4. Garanti Vermeme</b>
+                            <p> İŞBU SÖZLEŞME MADDESİ UYGULANABİLİR KANUNUN İZİN VERDİĞİ AZAMİ ÖLÇÜDE GEÇERLİ OLACAKTIR. FİRMA TARAFINDAN SUNULAN HİZMETLER "OLDUĞU GİBİ” VE "MÜMKÜN OLDUĞU” TEMELDE SUNULMAKTA VE PAZARLANABİLİRLİK, BELİRLİ BİR AMACA UYGUNLUK VEYA İHLAL ETMEME KONUSUNDA TÜM ZIMNİ GARANTİLER DE DÂHİL OLMAK ÜZERE HİZMETLER VEYA UYGULAMA İLE İLGİLİ OLARAK (BUNLARDA YER ALAN TÜM BİLGİLER DÂHİL) SARİH VEYA ZIMNİ, KANUNİ VEYA BAŞKA BİR NİTELİKTE HİÇBİR GARANTİDE BULUNMAMAKTADIR.</p>
+
+                            <b>5. Mücbir Sebep</b>
+                            <p>
+                                Tarafların kontrolünde olmayan; tabii afetler, yangın, patlamalar, iç savaşlar, savaşlar, ayaklanmalar,
+                                halk hareketleri, seferberlik ilanı, grev, lokavt ve salgın hastalıklar, altyapı ve internet arızaları,
+                                elektrik kesintisi gibi sebeplerden (aşağıda birlikte "Mücbir Sebep” olarak anılacaktır.) dolayı sözleşmeden
+                                doğan yükümlülükler taraflarca ifa edilemez hale gelirse, taraflar bundan sorumlu değildir. Bu sürede Taraflar’ın işbu Sözleşme’den doğan hak ve yükümlülükleri askıya alınır.
+                            </p>
+
+                            <b>6. Sözleşmenin Bütünlüğü ve Uygulanabilirlik</b>
+                            <p>
+                                İşbu sözleşme şartlarından biri, kısmen veya tamamen geçersiz hale gelirse, sözleşmenin geri kalanı geçerliliğini korumaya devam eder.
+                            </p>
+                            <b> 7. Sözleşmede Yapılacak Değişiklikler</b>
+                            <p>
+                                Firma, dilediği zaman sitede sunulan hizmetleri ve işbu sözleşme şartlarını kısmen veya tamamen değiştirebilir. Değişiklikler sitede yayınlandığı tarihten itibaren geçerli olacaktır. Değişiklikleri takip etmek Kullanıcı’nın sorumluluğundadır. Kullanıcı, sunulan hizmetlerden yararlanmaya devam etmekle bu değişiklikleri de kabul etmiş sayılır.
+                            </p>
+                            <b> 8. Tebligat</b>
+                            <p>
+                                İşbu Sözleşme ile ilgili taraflara gönderilecek olan tüm bildirimler, Firma’nın bilinen e-posta adresi ve kullanıcının üyelik formunda belirttiği e-posta adresi ve cep telefon numarası vasıtasıyla yapılacaktır. Kullanıcı, üye olurken belirttiği adresin geçerli tebligat adresi olduğunu, değişmesi durumunda 5 gün içinde yazılı olarak diğer tarafa bildireceğini, aksi halde bu adrese yapılacak tebligatların geçerli sayılacağını kabul eder.
+                            </p>
+                            <b> 9. Delil Sözleşmesi</b>
+                            <p>
+                                Taraflar arasında işbu sözleşme ile ilgili işlemler için çıkabilecek her türlü uyuşmazlıklarda Taraflar’ın defter, kayıt ve belgeleri ile ve bilgisayar kayıtları ve faks kayıtları 6100 sayılı Hukuk Muhakemeleri Kanunu uyarınca delil olarak kabul edilecek olup, kullanıcı bu kayıtlara itiraz etmeyeceğini kabul eder.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+    }
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+</body>
+</html>
