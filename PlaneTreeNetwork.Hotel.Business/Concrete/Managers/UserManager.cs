@@ -23,7 +23,10 @@ namespace PlaneTreeNetwork.Hotel.Business.Concrete.Managers
         [FluentValidationAspect(typeof(UserValidatior))]
         public User Add(User customer)
         {
-            return _userDal.Add(customer);
+            if (_userDal.Get(x => x.UserName == customer.UserName) == null)
+                return _userDal.Add(customer);
+            else
+                throw new NotImplementedException();
         }
 
         public List<User> GetAll()
